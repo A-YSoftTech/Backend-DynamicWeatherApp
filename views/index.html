@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/weat.css">
+    <title>Weather Forecast</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="day">
+            <div class=" sun"></div>
+            <div class="cloud">
+                <img src="/images/cloud.png" alt="" id="cloud-3">
+                <img src="/images/cloud.png" alt="" id="cloud-2">
+                <img src="/images/cloud.png" alt="" id="cloud-1">
+            </div>
+        </div>
+
+        <div class="night">
+            <div class="moon"></div>
+            <section class="starDiv">
+                <div class="star">
+                    <i class="fa-solid fa-star" id="odd"></i>
+                    <i class="fa-solid fa-star" id="even"></i>
+                    <i class="fa-solid fa-star" id="prime"></i>
+                    <i class="fa-solid fa-star" id="even"></i>
+                    <i class="fa-solid fa-star" id="odd"></i>
+                    <i class="fa-solid fa-star" id="prime"></i>
+                    <i class="fa-solid fa-star" id="odd"></i>
+                    <i class="fa-solid fa-star" id="prime"></i>
+                    <i class="fa-solid fa-star" id="even"></i>
+                    <i class="fa-solid fa-star" id="odd"></i>
+                    <i class="fa-solid fa-star" id="even"></i>
+                    <i class="fa-solid fa-star" id="prime"></i>
+                    <i class="fa-solid fa-star" id="odd"></i>
+                    <i class="fa-solid fa-star" id="even"></i>
+                </div>
+            </section>
+            <div class="cloud">
+                <img src="/images/cloud.png" alt="" id="cloud-3">
+                <img src="/images/cloud.png" alt="" id="cloud-2">
+                <img src="/images/cloud.png" alt="" id="cloud-1">
+            </div>
+        </div>
+        <div class="lightining"></div>
+        <div class="rain"></div>
+        <div class="dust"></div>
+        <div class="fog"></div>
+
+        <div class="base">
+            <div class="weather">
+                <div class="block1">
+                    <div class="head">
+                        <div class="input-div">
+                            <input type="text" id="search-box" placeholder="enter the city name">
+                            <i class="fa-solid fa-xmark" id="empty-box"></i>
+                        </div>
+                        <button id="but"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <ul id="cityResults"></ul>
+                    </div>
+                    <hr style="width: 80%;height: 1px;background-color: white;">
+                    <div class="middle">
+                        <img id="img" src="" alt="?">
+                        <h1 id="temp">--°c</h1>
+                        <i id="description">--</i>
+                        <div class="location">
+                            <i class="fa-solid fa-earth-americas" id="earth"></i>
+                            <p id="city">City, Country</p>
+                        </div>
+                    </div>
+                    <hr style="width: 80%;height: 1px;background-color: white;">
+                    <div class="foot">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p id="date"> DD MM, YYYY HH:MM</p>
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="weather-detail">
+                        <div class="temp common">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <p>Feels-Like <br> <span id="f-l">--</span></p>
+                            <p>Max-Temp <br> <span id="mx-t">--</span></p>
+                            <p>Min-Temp <br> <span id="mn-t">--</span></p>
+                        </div>
+                        <div class="pressure common">
+                            <i class="fa-solid fa-weight-scale"></i>
+                            <p>Pressure <br> <span id="pre">--</span></p>
+                            <p>Gnd-level <br> <span id="g-l">--</span></p>
+                            <p>Sea-level <br> <span id="s-l">--</span></p>
+                        </div>
+                        <div class="wind common">
+                            <i class="fa-solid fa-wind"></i>
+                            <p>Wind-blows <br> <span id="w-b">--</span></p>
+                            <p>Direction (N) <br> <span id="d-n">--</span></p>
+                            <p>Humidity <br> <span id="hum">--</span></p>
+                        </div>
+                        <div class="sunrise common">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <p>Sunrise At <br> <span id="s-r">00:00:00</span></p>
+                            <p>Sunset At <br> <span id="s-s">00:00:00</span></p>
+                        </div>
+                    </div>
+                    <div id="map">Map</div>
+                </div>
+            </div>
+            <div class="nav">
+                <p id="convert"><i class="fa-solid fa-repeat"></i></p>
+                <p id="favourite">
+                    <i class="fa-solid fa-star"></i>
+                    <ul id="cityFav"></ul>
+                </p>
+                <img src="/images/logo.png" alt="logo">
+                <p id="gps"><i class="fa-solid fa-location-crosshairs"></i></p>
+                <a href="/"><i class="fa-solid fa-house"></i></a>
+            </div>
+        </div>
+        <img src="/images/cloud.png" alt="Cloud" id="cld">
+        <div class="staticCloud">
+            <img src="/images/cloud.png" alt="Cloud" >
+            <img src="/images/cloud.png" alt="Cloud" >
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="/js/weat.js"></script>
+</body>
+
+</html>
