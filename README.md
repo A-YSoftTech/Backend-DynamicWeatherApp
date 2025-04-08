@@ -43,3 +43,22 @@
         bash
               node index.js
    Then go to http://localhost:8000 in your browser.
+
+## Contributing
+  Feel free to fork the project, create issues, and submit pull requests if you want to contribute.
+ 
+   Steps to Contribute:
+     -  Fork the repository.
+     -  Create a new branch for your feature or bug fix.
+     -  Make your changes and test them locally.
+     -  Submit a pull request with a description of the changes you've made.
+ 
+## Contact Information
+   If you have any questions or need help with the project, feel free to reach out:
+ 
+   Email: aky21062002yadav@gmail.com
+   Phone: 62909 97831.
+   
+ 
+## Acknowledgments
+   Special thanks to FontAwesome, OpenWeatherMap, Google Maps JS API for the icons used throughout the website.
